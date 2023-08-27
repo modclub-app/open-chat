@@ -1,7 +1,7 @@
 import type { Theme } from "../types";
 
 // Colors
-const white = "#FFFFFF"
+const white = "#FFFFFF";
 const pink1 = "#f29ad8";
 const pink2 = "#ee71c3";
 const pink3 = "#e448a3";
@@ -37,15 +37,17 @@ export function getTheme(base: Theme): Theme {
     base.panel.right.modal = "#e1349a";
     base.modal.bd = base.bd;
     base.modal.bg = pink3;
-    base.chatSummary["bg-selected"] = "rgb(225, 52, 154 / 80%)";
+    base.chatSummary["bg-selected"] = "#e75aac";
     base.chatSummary.hv = "rgb(225, 52, 154 / 80%)";
     base.chatSummary.del = base.button.bg;
     base.members.hv = base.chatSummary.hv;
     base.placeholder = txtLight;
     base.entry.bg = pink3;
     base.entry.input.bg = pink1;
+    base.entry.input.sh = "none";
     base.input.bg = pink1;
     base.input.accent = barbieBlue;
+    base.input.sh = "none";
     base.chatSearch.bg = pink2;
     base.currentChat.msg.bg = friendsMessageBackground;
     base.currentChat.msg.me.bg = yourMessageBackground;
@@ -68,6 +70,8 @@ export function getTheme(base: Theme): Theme {
     base.scrollbar.bg = base.button.hv;
     base.toast.success.bg = base.notificationBar.bg;
     base.code = white;
+    base.chatSearch.sh = "none";
+    base.recommended.bg = pink3;
 
     return base;
 }
